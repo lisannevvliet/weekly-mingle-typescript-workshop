@@ -3,7 +3,7 @@
  * Exercise 1
  * Adding types to variables
  *
- * https://www.typescriptlang.org/docs/handbook/basic-types.html#table-of-contents
+ * https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
  *
  * TO RUN TEST
  * npm run test-1
@@ -13,7 +13,7 @@
 
 function test01() {
 
-  /* 01. Basic types
+  /*
    * ======================================================
    * TODO:
    * 1. Type all the variables with the the correct type (stated above the variables).
@@ -51,9 +51,9 @@ function test01() {
   /* TIP
    * ======================================================
    * When we started out with TypeScript at Label A we had a rule in place. If a TypeScript error
-   * took you longer than 10 minutes, add the 'any' type. As you would think this tells TypeScript
-   * your variable can be anything, thus it won't give you an error. You can do this yourself when
-   * starting out to make the transition go over smoothly.
+   * took you longer than 10 minutes, add the 'any' type. This type tells TypeScript your variable
+   * can be anything, thus it won't give you an error. You can do this yourself when starting out to
+   * make the transition go over smoothly.
    * ======================================================*/
 
 
