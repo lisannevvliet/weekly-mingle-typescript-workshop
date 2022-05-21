@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "useBuiltIns": "entry", "corejs": 3 }],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    "lodash",
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-export-default-from"
+  ]
+}

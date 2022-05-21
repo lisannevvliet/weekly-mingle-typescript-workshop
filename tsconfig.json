@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "sourceMap": true,
+    "pretty": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "removeComments": false,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "config/*": ["config/*"],
+      "exercices/*": ["src/exercises/*"],
+    },
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  }
+}
