@@ -1,9 +1,9 @@
-import { setName } from './helpers';
-
 /*
  * ======================================================
  * Exercise 3
  * Creating and reusing types
+ *
+ * https://www.typescriptlang.org/docs/handbook/2/objects.html
  *
  * TO RUN TEST
  * npm run test-3
@@ -14,18 +14,18 @@ import { setName } from './helpers';
 /* 01. Creating a type object
  * ======================================================
  * TODO:
- * 1. Type the 'Person' object
- * 2. Add the type to the 'person' const
+ * 1. Type the 'Employee' object
+ * 2. Add the type to the 'employee' variable
  * ======================================================*/
 
-export type Person = {};
+export type Employee = {};
 
 export function exercise0301() {
-  const person = {
-    name: 'TypeScript fanboy',
+  const employee = {
+    name: 'Timothy',
     age: 25,
-    city: '020',
-    interests: ['React', 'Styled Components', 'React Native', 'ES6'],
+    city: 'Amsterdam',
+    interests: ['React', 'Gatsby'],
   };
 
 
@@ -38,7 +38,7 @@ export function exercise0301() {
    * ======================================================
    * Do not touch this
    * ======================================================*/
-  return { person };
+  return { employee };
 }
 
 
@@ -56,22 +56,35 @@ export type Company = {};
 export function exercise0302() {
   const company = {
     name: 'Label A',
+    address: 'Max Euweplein 24',
+    postal_code: '1017MB',
+    city: 'Amsterdam',
+    employee_amount: 2,
     employees: [
       {
-        name: 'Jorn Bostelaar',
-        age: 27,
-        city: '020',
-        interests: ['SSR', 'React'],
+        name: 'Timothy',
+        age: 25,
+        city: 'Amsterdam',
+        interests: ['React', 'Gatsby'],
       },
       {
-        name: 'Ronny Rook',
-        age: 25,
-        city: '020',
-        interests: ['Styled Components', 'React Native'],
+        name: 'Marcel',
+        age: 27,
+        city: 'Rotterdam',
+        interests: ['TypeScript', 'React Native'],
       },
     ],
   };
 
+
+  /* TIP
+   * ======================================================
+   * Sometimes you're not sure if variable in an object is filled in, for example while using an API.
+   * To combat this you can prefix the type with a '?', like so,
+   * {
+   *   name?: string;
+   * }
+   * ======================================================*/
 
 
 
@@ -82,60 +95,4 @@ export function exercise0302() {
    * Do not touch this
    * ======================================================*/
   return { company };
-}
-
-
-/* 03. Strictening types
- * ======================================================
- * TODO:
- * 1. Type the 'StrictCompany' object
- * 2. Make sure to properly type the React like setName function, the optional params and stricten up the city property
- * 3. Add type to the 'strictCompany' const
- *
- * Tip: Feel free to reuse and refactor te types used above to come up with a good system.
- * ======================================================*/
-
-export type StrictCompany = {};
-
-export function exercise0303() {
-  const strictCompany = {
-    name: 'Label A',
-    employees: [
-      {
-        name: 'Jorn Bostelaar',
-        lead: true,
-        age: 27,
-        city: '020',
-        interests: ['SSR', 'React'],
-        setName: setName(),
-      },
-      {
-        name: 'Ronny Rook',
-        innovation: true,
-        age: 25,
-        city: '020',
-        interests: ['Styled Components', 'React Native'],
-        setName: setName(),
-      },
-      {
-        name: 'Stefan Weck',
-        lead: true,
-        age: 27,
-        city: '010',
-        interests: ['SSR', 'Gatsby'],
-        setName: setName(),
-      },
-    ],
-  };
-
-
-
-
-
-
-  /*
-   * ======================================================
-   * Do not touch this
-   * ======================================================*/
-  return { strictCompany };
 }

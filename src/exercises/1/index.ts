@@ -52,8 +52,7 @@ function test01() {
    * ======================================================
    * When we started out with TypeScript at Label A we had a rule in place. If a TypeScript error
    * took you longer than 10 minutes, add the 'any' type. This type tells TypeScript your variable
-   * can be anything, thus it won't give you an error. You can do this yourself when starting out to
-   * make the transition go over smoothly.
+   * can be anything, thus it won't give you an error.
    * ======================================================*/
 
 

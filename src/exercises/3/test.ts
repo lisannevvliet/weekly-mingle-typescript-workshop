@@ -1,13 +1,13 @@
 import { assert, IsExact } from 'conditional-type-checks';
-import { exercise0301, exercise0302, exercise0303, Person, Company, StrictCompany } from './index';
+import { exercise0301, exercise0302, Employee, Company } from './index';
 
 // 1.
-// Check Person type
-assert<IsExact<Person, Test03.Exercise01.Person>>(true);
+// Check Employee type
+assert<IsExact<Employee, Test03.Exercise01.Employee>>(true);
 
-// Check person object type
-const { person } = exercise0301();
-assert<IsExact<typeof person, Test03.Exercise01.Person>>(true);
+// Check employee object type
+const { employee } = exercise0301();
+assert<IsExact<typeof employee, Test03.Exercise01.Employee>>(true);
 
 
 // 2.
@@ -20,22 +20,12 @@ assert<IsExact<typeof company, Test03.Exercise02.Company>>(true);
 
 
 
-// 3.
-// Check StrictCompany type
-assert<IsExact<StrictCompany, Test03.Exercise03.StrictCompany>>(true);
-
-// Check company object type
-const { strictCompany } = exercise0303();
-assert<IsExact<typeof strictCompany, Test03.Exercise03.StrictCompany>>(true);
-
-
-
 
 
 
 namespace Test03 {
   export namespace Exercise01 {
-    export type Person = {
+    export type Employee = {
       name: string;
       age: number;
       city: string;
@@ -46,19 +36,11 @@ namespace Test03 {
   export namespace Exercise02 {
     export type Company = {
       name: string;
-      employees: Exercise01.Person[];
-    };
-  }
-
-  export namespace Exercise03 {
-    export type StrictCompany = {
-      name: string;
-      employees: (Omit<Exercise01.Person, 'city'> & {
-        city: '010' | '020';
-        setName: [string, (name: string) => string];
-        lead?: boolean;
-        innovation?: boolean;
-      })[];
+      address: string;
+      postal_code: string;
+      city: string;
+      employee_amount: number;
+      employees: Exercise01.Employee[];
     };
   }
 }
