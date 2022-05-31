@@ -1,11 +1,18 @@
-import { expectType } from 'tsd';
+import { assert, IsExact } from 'conditional-type-checks';
 
 import Exercise02 from './index';
 
-expectType<Test02.a>(Exercise02.a);
-expectType<Test02.b>(Exercise02.b);
-expectType<Test02.c>(Exercise02.c);
-expectType<Test02.d>(Exercise02.d);
+assert<IsExact<Parameters<typeof Exercise02.a>, Parameters<Test02.a>>>(true);
+assert<IsExact<ReturnType<typeof Exercise02.a>, ReturnType<Test02.a>>>(true);
+
+assert<IsExact<Parameters<typeof Exercise02.b>, Parameters<Test02.b>>>(true);
+assert<IsExact<ReturnType<typeof Exercise02.b>, ReturnType<Test02.b>>>(true);
+
+assert<IsExact<Parameters<typeof Exercise02.c>, Parameters<Test02.c>>>(true);
+assert<IsExact<ReturnType<typeof Exercise02.c>, ReturnType<Test02.c>>>(true);
+
+assert<IsExact<Parameters<typeof Exercise02.d>, Parameters<Test02.d>>>(true);
+assert<IsExact<ReturnType<typeof Exercise02.d>, ReturnType<Test02.d>>>(true);
 
 namespace Test02 {
   export type a = () => string;
