@@ -3,7 +3,7 @@
  * Exercise 1
  * Adding types to variables
  *
- * https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+ * https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
  *
  * TO RUN TEST
  * npm run test-1
@@ -28,24 +28,14 @@ function test01() {
   // boolean
   let c;
 
-  // undefined
+  // Array of string
   let d;
 
-  // null
+  // Object with properties 'id' and 'name' and value of type string
   let e;
 
-  // Array of strings (Use the [] syntax)
-  // https://www.typescriptlang.org/docs/handbook/basic-types.html#array
-  let f;
-
-  // Object with properties 'id' and 'name' and value of type string
-  let g;
-
   // string OR number
-  let h;
-
-  // Array of string OR number
-  let i;
+  let f;
 
 
   /* TIP
@@ -63,7 +53,7 @@ function test01() {
    * Do not touch this
    * ======================================================*/
   // @ts-ignore
-  return { a, b, c, d, e, f, g, h, i };
+  return { a, b, c, d, e, f };
 }
 
 export default test01();

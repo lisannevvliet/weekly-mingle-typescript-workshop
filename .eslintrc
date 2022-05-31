@@ -88,6 +88,7 @@
     "@typescript-eslint/no-parameter-properties": [0],
     "@typescript-eslint/no-non-null-assertion": [0],
     "@typescript-eslint/camelcase": [0],
-    "@typescript-eslint/no-redeclare": 0
+    "@typescript-eslint/no-redeclare": 0,
+    "@typescript-eslint/no-explicit-any": 0
   }
 }
