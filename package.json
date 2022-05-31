@@ -9,20 +9,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development TS_NODE_PROJECT=config/tsconfig.json webpack serve --config config/webpack.config.dev.ts",
-    "build": "rimraf dist/ && NODE_ENV=production npm run build:server && NODE_ENV=production TS_NODE_PROJECT=config/tsconfig.json webpack --progress --config config/webpack.config.prod.ts",
-    "build:server": "tsc --project server/tsconfig.json",
-    "server": "node dist/server.js",
-    "clean": "rimraf dist/",
-    "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src/",
-    "analyzer": "webpack --config config/webpack.config.prod.ts --profile --json > stats.json && webpack-bundle-analyzer stats.json ./dist",
-    "typecheck": "tsc --noEmit",
     "test": "tsc --watch",
     "test-1": "npm run test -- -p src/exercises/1/tsconfig.json",
     "test-2": "npm run test -- -p src/exercises/2/tsconfig.json",
-    "test-3": "npm run test -- -p src/exercises/3/tsconfig.json",
-    "test-4": "npm run test -- -p src/exercises/4/tsconfig.json",
-    "test-5": "npm run test -- -p src/exercises/5/tsconfig.json"
+    "test-3": "npm run test -- -p src/exercises/3/tsconfig.json"
   },
   "keywords": [],
   "browserslist": [
