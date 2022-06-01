@@ -24,7 +24,7 @@ export type Employee = {};
 export function exercise0301() {
   const employee: Employee = {
     name: 'Timothy',
-    age: 25,
+    age: 24,
     city: 'Amsterdam',
     interests: ['React', 'Gatsby'],
   };
@@ -63,7 +63,7 @@ export function exercise0302() {
     employees: [
       {
         name: 'Timothy',
-        age: 25,
+        age: 24,
         city: 'Amsterdam',
         interests: ['React', 'Gatsby'],
       },
