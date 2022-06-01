@@ -28,7 +28,7 @@ function test01() {
   // boolean
   let c;
 
-  // Array of string
+  // Array of strings (using the [] syntax)
   let d;
 
   // Object with properties 'id' and 'name' and value of type string
