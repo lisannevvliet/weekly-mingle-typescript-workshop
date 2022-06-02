@@ -22,16 +22,16 @@ function test02() {
    * ======================================================*/
 
   // Function without parameters that returns a string
-  let a;
+  let a = (): string => { return "a" };
 
   // Function that takes a string parameter, and returns a string
-  let b;
+  let b = (a: string): string => { return a };
 
   // Function without parameters that returns nothing (void)
-  let c;
+  let c = (): void => { };
 
   // Function that takes a person parameter (object with id: string and name: string), and returns nothing
-  let d;
+  let d = (person: { id: string, name: string }): void => { };
 
 
 

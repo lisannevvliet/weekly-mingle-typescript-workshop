@@ -20,22 +20,22 @@ function test01() {
    * ======================================================*/
 
   // number
-  let a;
+  let a: number;
 
   // string
-  let b;
+  let b: string;
 
   // boolean
-  let c;
+  let c: boolean;
 
   // Array of strings (using the [] syntax)
-  let d;
+  let d: string[];
 
   // Object with properties 'id' and 'name' and value of type string
-  let e;
+  let e: { id: string, name: string };
 
   // string OR number
-  let f;
+  let f: string | number;
 
 
   /* TIP

@@ -19,7 +19,7 @@
  * 1. Type the 'Employee' object
  * ======================================================*/
 
-export type Employee = {};
+export type Employee = { name: string, age: number, city: string, interests: string[] };
 
 export function exercise0301() {
   const employee: Employee = {
@@ -51,7 +51,7 @@ export function exercise0301() {
  * 2. Reuse the 'Person' type within the new 'Company' type
  * ======================================================*/
 
-export type Company = {};
+export type Company = { name: string, address: string, postal_code: string, city: string, employee_amount: number, employees: Employee[] };
 
 export function exercise0302() {
   const company: Company = {
